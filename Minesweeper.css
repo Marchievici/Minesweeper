@@ -1,0 +1,28 @@
+#title {
+	text-align: center;
+	font-size: 40px;
+}
+
+
+.board {
+	background-color: rgb(211,211,211);
+	margin-left: 480px; 
+	margin-right: 516px;
+	display: flex;
+	font-size: 0px;
+}
+
+p {
+	color: red;
+	text-align: center;
+	font-size: 30px;
+}
+
+.btn {
+	visibility: hidden;
+	margin: 0 auto;
+    display: block;
+}
+
+
+
