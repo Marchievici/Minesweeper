@@ -138,7 +138,7 @@ function whenClick(id) {
     i = parseInt(id[0]);
     j = parseInt(id[1]);
     var elem = document.getElementById(id);
-    var table = document.getElementById("table");//in functia checkWin
+    var table = document.getElementById("table");
     if (board[j][i] == "b") {//if click on bomb
         document.getElementById("WinOrLost").innerHTML = "You lost, try again!";
         document.querySelectorAll('.mines').forEach(function(element) {
@@ -151,7 +151,7 @@ function whenClick(id) {
     } else if (possible_numbers.includes(board[j][i])) {//if click on numbers
         elem.style.cssText = "position: relative; font-size: 30px; height: 60px; background-color: white; border: 1px solid black; text-align: center";
         checkWin();
-    } else {//if i click on empty cell   
+    } else {//if click on empty cell   
         var empty_cells = [];
         empty_cells[0] = id;
         for (ind = 0; ind < empty_cells.length; ++ind) {
@@ -176,7 +176,7 @@ function whenClick(id) {
                 var right_elem = document.getElementById("" + aux_i + j);
                 var fontSize = window.getComputedStyle(right_elem, null).getPropertyValue('font-size');
                 if (board[j][aux_i] == " " && fontSize == "0px" && empty_cells.includes("" + aux_i + j) == false) {//dreapta
-                    empty_cells.push("" + aux_i + j)//pun id in lista
+                    empty_cells.push("" + aux_i + j)
                 } else if (fontSize == "0px") {         
                     right_elem.style.cssText = "font-size: 30px; height: 60px; width: 60px; background-color: white; border: 1px solid black; text-align: center";
                 }
@@ -187,7 +187,7 @@ function whenClick(id) {
                 var bottom_elem = document.getElementById("" + i + aux_j);
                 var fontSize = window.getComputedStyle(bottom_elem, null).getPropertyValue('font-size');
                 if (board[aux_j][i] == " " && fontSize == "0px" && empty_cells.includes("" + i + aux_j) == false) {//dreapta
-                    empty_cells.push("" + i + aux_j)//pun id in lista
+                    empty_cells.push("" + i + aux_j)
                 } else if (fontSize == "0px")  {                 
                     bottom_elem.style.cssText = "font-size: 30px; height: 60px; width: 60px; background-color: white; border: 1px solid black; text-align: center";
                 } 
