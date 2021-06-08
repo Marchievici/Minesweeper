@@ -13,16 +13,22 @@
 }
 
 p {
-	color: red;
+	color: darkorange;
 	text-align: center;
 	font-size: 30px;
 }
 
-.btn {
+.btn-reset {
 	visibility: hidden;
 	margin: 0 auto;
-    display: block;
+    	display: block;
 }
 
-
-
+.element {
+	position: relative;
+	border: 1px solid black;
+	border-collapse: collapse;
+	width: 60px; 
+	height: 60px; 
+	text-align: center
+}
